@@ -1,0 +1,9 @@
+*.pyc
+*.jpg
+*.pth
+events.out.*
+*.log
+*.json
+*.txt
+*.sh
+data/utils.py
