@@ -91,6 +91,7 @@ if __name__ == '__main__':
     parser.add_argument('--train_size',  type=int,   default=352,                       help='training dataset size'                )
     parser.add_argument('--gpu_id',      type=str,   default='0',                       help='train use gpu'                        )
     parser.add_argument('--data_root',   type=str,   default=None,                      help='the training images root'             )
+    parser.add_argument('--task',        type=str,   default=None,                      help='Quantitative or Qualitative eval task')
 
     args = parser.parse_args()
 
@@ -113,5 +114,10 @@ if __name__ == '__main__':
     output_path = args.resume
 
     print("Start eval...")    
-    # Quantitative(test_loader, model, output_path)
-    Qualitative(test_loader, model, output_path)
+    if task = 'Quantitative':
+        Quantitative(test_loader, model, output_path)
+    if task = 'Qualitative':
+        Qualitative(test_loader, model, output_path)
+    else:
+        Quantitative(test_loader, model, output_path)
+        Qualitative(test_loader, model, output_path)

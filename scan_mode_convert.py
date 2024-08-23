@@ -5,9 +5,9 @@ import numpy as np
 
 from tqdm import tqdm
 
-def rectangle_to_circle(im, angle, r0=0, k=2, top=True,rotate=0):
+def linear_to_convex(im, angle, r0=0, k=2, top=True,rotate=0):
     """
-    Convert rectangular image to a circular (or sector-shaped) image.
+    Convert linear-array image to a convex-array (or sector-shaped) image.
 
     Parameters:
     im (ndarray)      - Input image
@@ -45,9 +45,9 @@ def rectangle_to_circle(im, angle, r0=0, k=2, top=True,rotate=0):
     im_fan = np.flip(im_fan, (0,1))
     return im_fan
 
-def circle_to_rectangle(img, inner_circle_rad=None, outer_circle_rad=None, x_min=None, x_max=None):
+def convex_to_linear(img, inner_circle_rad=None, outer_circle_rad=None, x_min=None, x_max=None):
     """
-    Convert a circular image to a rectangular image.
+    Convert a convex-array image to a linear-array image.
     
     Parameters:
     img (ndarray)           - Input circular image
@@ -88,12 +88,12 @@ def circle_to_rectangle(img, inner_circle_rad=None, outer_circle_rad=None, x_min
     return img_out, inner_circle_rad, outer_circle_rad, x_min, x_max
 
     
-def rectangle_circle_conversion():
+def linear_convex_conversion():
     image_dir = 'path/to/image_folder'
     mask_dir  = 'path/to/mask_folder'
     cvt_image_dir = image_dir.replace('image', 'crop_image')+'_convert'
     cvt_mask_dir = image_dir.replace('image', 'crop_mask')+'_convert'
-    if type == 'rectangle':
+    if type == 'linear':
         for img in tqdm(sorted(os.listdir(image_dir))):
             if img.endswith('.jpg'):
                 image = cv2.imread(image_dir+'/'+img) #H,W,C
