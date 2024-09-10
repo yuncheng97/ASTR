@@ -13,8 +13,8 @@ Endorectal ultrasound (ERUS) is an important imaging modality that provides high
 
 ```shell
 # clone project
-git clone https://github.com/yuncheng97/YONA.git
-cd YONA/
+git clone https://github.com/yuncheng97/ASTR.git
+cd ASTR/
 
 # create conda environment and install dependencies
 conda env create -f environment.yaml
@@ -22,7 +22,7 @@ conda activate ASTR
 ```
 
 ### Download dataset
-This database is available for only non-commercial use in research or educational purpose. As long as you use the database for these purposes, you can edit or process images and annotations in this database. Please contact the jyc040204011@gmail.com and specify your institution and research topic to obtain the download link.
+This database is available for only non-commercial use in research or educational purpose. As long as you use the database for these purposes, you can edit or process images and annotations in this database. Please sign the [license agreement](figs/ERUS-License.pdf) and send it to jyc040204011@gmail.com to obtain the download link.
 
 After download the dataset, put the dataset in the "/data" folder
 
@@ -34,8 +34,8 @@ mkdir data/
 ### Download pretrained backbone
 
 download the pretrained backbone weights and put them in the "/pretrained" folder
-- Res2Net50: ()
-- PVT_v2_b2: ()
+- [Res2Net50](https://drive.google.com/file/d/1RzSdIGhM6kR7yJQWHWy8ed7WNhGrt-m3/view?usp=sharing)
+- [PVT_v2_b2](https://drive.google.com/file/d/1I8uPAEzKuI311V_HJpQ7Ppf-LDgi7K_O/view?usp=sharing)
 
 
 ```shell
@@ -105,7 +105,12 @@ This code of repository is built on [FLA-Net](https://github.com/jhl-Det/FLA-Net
 ## :book: Citation
 - If you find this work is helpful, please cite our paper
 ```
-
+@article{jiang2024towards,
+  title={Towards a Benchmark for Colorectal Cancer Segmentation in Endorectal Ultrasound Videos: Dataset and Model Development},
+  author={Jiang, Yuncheng and Hu, Yiwen and Zhang, Zixun and Wei, Jun and Feng, Chun-Mei and Tang, Xuemei and Wan, Xiang and Liu, Yong and Cui, Shuguang and Li, Zhen},
+  journal={arXiv preprint arXiv:2408.10067},
+  year={2024}
+}
 ```
 
 
