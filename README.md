@@ -33,14 +33,18 @@ mkdir data/
 
 ### Download pretrained backbone
 
-download the pretrained backbone weights and put them in the "/pretrained" folder
+download the pretrained backbone weights and put them in the "/pretrained" folder. Then you can train the model on the ERUS-10K or your own dataset from scratch.
 - [Res2Net50](https://drive.google.com/file/d/1RzSdIGhM6kR7yJQWHWy8ed7WNhGrt-m3/view?usp=sharing)
 - [PVT_v2_b2](https://drive.google.com/file/d/1I8uPAEzKuI311V_HJpQ7Ppf-LDgi7K_O/view?usp=sharing)
-
 
 ```shell
 mkdir pretrained/
 ```
+
+### Download pretrained model (optional)
+
+you can also download our [pretrained model checkpoint](https://drive.google.com/file/d/1hM7vZuKroNqbO0gaZiQVAP4xcSLXTjHW/view?usp=sharing) on ERUS-10K for evaluation.
+
 
 ### Generate augmented dataset
 Generate the augmented dataset by *adaptive scanning model augmentation*
@@ -88,6 +92,8 @@ python -m torch.distributed.launch --nproc_per_node=2 --master_port=29500 -use_e
         --distributed \
         --note your_own_experiment_note \
 ```
+
+
 **Evaluation**
 ```shell
 python eval.py \
