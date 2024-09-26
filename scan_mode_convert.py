@@ -99,8 +99,8 @@ def linear_convex_conversion():
                 image = cv2.imread(image_dir+'/'+img) #H,W,C
                 mask = cv2.imread(mask_dir+'/'+img.replace('.jpg', '.png'))
                 H,W,C = image.shape
-                image_cvt = rectangle_to_circle(image, angle=160, r0=120, k=20, top=False)
-                mask_cvt = rectangle_to_circle(mask, angle=160, r0=120, k=20, top=False)
+                image_cvt = linear_to_convex(image, angle=160, r0=120, k=20, top=False)
+                mask_cvt = linear_to_convex(mask, angle=160, r0=120, k=20, top=False)
                 image_cvt = cv2.resize(image_cvt, (W, H))
                 mask_cvt = cv2.resize(mask_cvt, (W, H))
                 cv2.imwrite(os.path.join(cvt_image_dir, img), image_cvt)
@@ -111,8 +111,8 @@ def linear_convex_conversion():
                 image = cv2.imread(image_dir+'/'+img) #H,W,C
                 mask = cv2.imread(mask_dir+'/'+img.replace('.jpg', '.png'))
                 H,W,C = image.shape
-                image_cvt, inner_circle_rad, outer_circle_rad, x_min, x_max = circle_to_rectangle(image)
-                mask_cvt, *_ = circle_to_rectangle(mask, inner_circle_rad, outer_circle_rad, x_min, x_max)
+                image_cvt, inner_circle_rad, outer_circle_rad, x_min, x_max = convex_to_linear(image)
+                mask_cvt, *_ = convex_to_linear(mask, inner_circle_rad, outer_circle_rad, x_min, x_max)
                 image_cvt = cv2.resize(image_cvt, (W, H))
                 mask_cvt = cv2.resize(mask_cvt, (W, H))
                 cv2.imwrite(os.path.join(cvt_image_dir, img), image_cvt)
