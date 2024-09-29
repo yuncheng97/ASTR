@@ -49,7 +49,7 @@ you can also download our [pretrained model checkpoint](https://drive.google.com
 ### Generate augmented dataset
 Generate the augmented dataset by *adaptive scanning model augmentation*
 
-The training dataset used in the paper is already generated in the "train_aug" folder. You can use the code to generate other images. Please noted that you need to specify each image as "linear" or "convex"
+You can use the code to generate the augmented data. Please noted that you need to specify each image as "linear" or "convex"
 
 ```shell
 python scan_mode_convert.py
