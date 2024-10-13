@@ -22,7 +22,7 @@ conda activate ASTR
 ```
 
 ### Download dataset
-This database is available for only non-commercial use in research or educational purpose. As long as you use the database for these purposes, you can edit or process images and annotations in this database. Please sign the [license agreement](figs/ERUS-License.pdf) and send it to jyc040204011@gmail.com to obtain the download link.
+This database is available for only non-commercial use in research or educational purpose. As long as you use the database for these purposes, you can edit or process images and annotations in this database. Please sign the [license agreement](figs/ERUS-License.pdf) and send it to yuncheng.jiang97@gmail.com to obtain the download link.
 
 After download the dataset, put the dataset in the "/data" folder
 
