@@ -154,7 +154,7 @@ class PVT(nn.Module):
 
 
 def pvt_v2_b2():
-    return PVT(embed_dims=[64, 128, 320, 512], mlp_ratios=[8, 8, 4, 4], depths=[3, 4, 6, 3], snapshot='/220019054/FLA-Net/pretrained/pvt_v2_b2.pth')
+    return PVT(embed_dims=[64, 128, 320, 512], mlp_ratios=[8, 8, 4, 4], depths=[3, 4, 6, 3], snapshot='pretrained/pvt_v2_b2.pth')
 
 if __name__ == "__main__":
     model = pvt_v2_b2()
