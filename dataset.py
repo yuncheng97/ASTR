@@ -73,7 +73,7 @@ class TrainDataset(data.Dataset):
             bodygt = Image.fromarray(bodygt)
             bodygts.append(bodygt)
 
-        image, gt, bodygt = self.transform(images, gts, gts)
+        image, gt, bodygt = self.transform(images, gts, bodygts)
         return torch.stack(image), torch.stack(gt), torch.stack(bodygt)
 
     def draw_gaussian(self, heatmap, center, radius, k=1):
